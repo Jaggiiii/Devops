@@ -1,0 +1,97 @@
+# Advanced linux.
+
+2nd january
+
+@
+command to find the file name in folders.
+find /path -name filename
+@
+Detailed info about a file.
+stat file.txt
+
+@
+compare 2 files
+diff file1.txt file2.txt
+
+
+
+@
+awk '{print $1}' file.txt
+this is the command used to print column of the file like here it is printing the 1st column.
+Aho, Weinberger, and Kernighan fullform of awk.
+
+@
+sed 's/old/new/' file.txt
+It replaces the first occurrence of old with new in each line of file.txt and prints the result.
+sed means Stream EDitor.
+It edits text line by line.
+S means substitue.
+
+@
+What is tar? (in one line)
+
+👉 tar is used to combine many files/folders into one file (and extract them back).
+Think of it like a box 📦
+Put many files into one box → create tar
+Open the box → extract tar
+Why the name tar?
+
+tar = Tape Archive
+(It was originally used to store files on magnetic tapes.)
+
+Basic tar commands (most common)
+1️⃣ Create a tar file (pack files)
+tar -cvf archive.tar file1 file2 folder/
+
+What it means:
+c → create a new archive
+v → verbose (show progress)
+f → file name
+
+👉 This puts file1, file2, and folder/ into archive.tar
+2️⃣ Extract a tar file (unpack files)
+tar -xvf archive.tar
+Meaning:
+
+x → extract
+v → show files
+f → archive file
+
+👉 Files come out of the tar file
+3️⃣ View contents without extracting
+tar -tvf archive.tar
+👉 Just shows what’s inside the tar file
+
+4️⃣ Tar + compression (very common)
+Create compressed tar (.tar.gz)
+tar -czvf archive.tar.gz folder/
+z → gzip compression (smaller size)
+
+Extract compressed tar
+tar -xzvf archive.tar.gz
+
+Most common options (easy table)
+Option	Meaning
+c	create
+x	extract
+t	list contents
+v	show progress
+f	file name
+z	gzip compression
+j	bzip2 compression
+
+
+@
+gzip file.txt  ----->compress the file
+gunzip file.txt.gz   --------- uncompress the file.
+
+@
+uptime  -----> used to check how long a system running.
+
+@
+watch ---> watch runs a command again and again automatically and shows the updated output.
+example : watch 2.0s: date
+          watch df -h
+
+
+
