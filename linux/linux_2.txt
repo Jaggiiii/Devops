@@ -95,3 +95,42 @@ example : watch 2.0s: date
 
 
 
+@
+In generally files will be scanned by disk ,but if you want to scan it using database 
+u need to install it because it was not inbuilt in linux or unix systems.
+
+sudo apt install mlocate
+sudo apt install plocate (on ubuntu 23.0 +)
+
+
+to update the db
+sudo updatedb
+
+then use the command 
+
+locate filename
+
+
+@
+
+vmstat 
+used to check  memory and cpu status.
+
+@
+traceroute 
+shows the path your data takes to reach the destination.
+
+@
+nslookup 
+is used to check DNS information.
+It tells you how a domain name is translated into an IP address (and vice versa).
+
+@
+
+telnet 
+Checking port connectivity
+Testing network services
+
+@
+which 
+shows the exact path of a command that will run.
