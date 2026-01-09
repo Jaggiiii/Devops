@@ -1,0 +1,46 @@
+1. echo $SHELL  is a command used to know which shell is you system is using.
+2. which bash   is  to tell the location and how versions of bash was there.
+3.A Bash script is a file that contains a list of Linux commands, and Bash runs them one by one automatically.
+
+ note : to execute a bash file u must provide execute permissions.
+
+variables in script :
+
+syntax :
+
+myname="jaggi"
+echo $myname
+
+In bash varaible by default they don't persist,but will persist inside the sh file.
+In echo statement Double quoates will variable by refrence but single quoates will not do that instead 
+stad it will print the thing present their along with $ symbol.
+\ is used to tell the script avoid the single quoate.
+To Store the linux command output in a variable u need to use subshell 
+   example files=$(ls)  which will store the ls output in files.
+   and if  u do echo $files then it show the ls output.
+If a variable is fully caps that means it is a env variable. 
+Best practice is to use small letters for creating variables.
+
+ basic maths 
+ expr 10 + 30
+ expr 10 - 30
+ expr 10 / 30
+
+ in bash * is a wild card operator not multiplication to multiplication u need add \ to understand bash that i am multiplying
+ expr 10 \* 30
+
+Conditions statements :
+
+
+Symbol	Meaning
+-eq	equal to
+-ne	not equal to
+-gt	greater than
+-lt	less than
+-ge	greater than or equal
+-le	less than or equal
+-f    used to check file present or not
+-d    used to check folder present or not
+-v   checks whether the variable exists or not.
+
+note : command is keyword to check the existence of those commmands 

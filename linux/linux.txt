@@ -1,0 +1,192 @@
+sudo-super user do
+ls - listing files
+cd - changing directory 
+cp - copying files and folders (.. #goback, ~ #home directory, / #directory)
+mv - moving files and folders
+pwd - used to check present working directory
+grep - used to find the required content in the files
+find - used to find the files with specific names
+figlet- which is used to decorate the the content
+cat - used to  the file
+mkdir -used to created directory (-p a/b/c #nested directory)
+rmdir - used to remove directory.
+rm - used to remove files and folders
+touch - used to create files 
+chmod - used to change permissons for user-group-others (4-read,2-write,1-execute)
+chown - used to change ownership for user and group
+less,more --> viewable coammnds using scroll
+man - it is a manual command which will information related to the respective command.
+vim -> used to create and edit file  (indepent of files exits or not)  
+Mode	Purpose
+
+Normal	navigation, commands
+Insert	typing text
+Visual	selecting text
+Command	save, quit, search
+
+
+:q        → quit
+:q!       → quit without saving
+:w        → save
+:wq       → save and quit
+:x        → save and quit (same as wq)
+
+
+
+# user and system information
+whoami ->current user
+id -----> user id information
+uname -a      # kernel info
+date - used to check date
+cal -used to check calender
+
+
+sudo apt update  -->Refreshes the package list from internet
+sudo apt upgrade  --> Installs the available updates for already installed packages
+sudo apt install package  -->  Downloads and installs a new package (software)
+sudo apt remove package  ---> Uninstalls a package but keeps its config files (Program files are deleted
+👉 Configuration files are NOT deleted)
+
+When you install a package, two types of things are created:
+Program files (binary, executable)
+Configuration files (settings)
+Config files store things like:
+
+ports
+usernames
+passwords
+paths
+service behavior
+environment settings
+They tell the software how to behave.
+
+Use it when:
+You may reinstall the package later
+You want to keep old settings
+You’re testing or upgrading software
+On servers where configs are valuable
+
+
+sudo apt purge package  --> Uninstalls a package and its config files
+
+Use it when:
+Package is broken or misconfigured
+You want a fresh install
+You’ll never use it again
+Cleaning old servers / freeing disk
+
+ 
+Disk and memory commands
+
+df -h         # disk usage   Shows disk storage usage df--> diskfree h- humanreadble.
+df -h         # disk usage
+du -sh dir    # directory size
+free -h       # memory usage
+lsblk         # block devices
+mount         # mounted filesystems
+umount path   # unmount
+free -h       #Shows RAM 
+
+*** Process Management 
+
+ps            # running processes  Shows processes running in your current terminal/session only
+PID   TTY      TIME     CMD
+1234  pts/0    00:00:00 bash
+
+PID → Process ID
+TTY → terminal
+TIME → CPU time
+CMD → command
+
+CMD → command
+ps aux --># all processes  Shows all running processes on the system inclueds all users,background services,system daemons
+top           # live process monitor   Shows real-time system activity Sorted by CPU usage by default
+htop          # advanced top (if installed)  Advanced, interactive version of top
+kill PID      # kill process  Politely asks process to stop
+kill -9 PID   # force kill  Sends SIGKILL (signal 9)
+
+
+Networking commands
+ip a --> Displays all network interfaces on the system
+
+Shows:
+IP addresses (IPv4 & IPv6)
+interface state (UP/DOWN)
+MAC address
+
+ip r
+
+Shows how traffic leaves your system
+Displays:
+default gateway
+which interface is used
+
+ping google.com # connectivity test
+
+*** 
+curl url --> HTTP request tool
+
+What it does
+Sends HTTP requests (GET by default)
+Displays response in terminal
+curl url
+curl -I url           # headers only
+curl -X POST url      # POST request
+curl -H "Auth: token" url
+
+wget url ---> used to donload files (full form "web get").
+
+What it does
+Downloads files from the internet
+Saves to current directory
+
+netstat -tuln
+Flags meaning
+
+t → TCP
+u → UDP
+l → listening
+n → numeric (no DNS)
+
+What it shows
+Which ports are open
+Which services are listening
+
+ss -tuln same as netstat -tuln but more fast and accurate
+
+
+command > file        # overwrite
+command >> file       # append
+command < file        #take input from the file instead of key board.
+command1 | command2  # pipe  The output of command1 becomes the input of command2.
+
+sudo command      # run as root
+su                # switch user
+su - root         # login as root
+exit              # come back
+
+
+#editors
+1.nano 2.vi 3.vim
+
+#system services
+systemctl status service   -->Check current condition of the service
+systemctl start service    -->Runs the service immediately  * Does NOT start on reboot
+systemctl stop service    ---> Stops the service immediately
+systemctl restart service  --> stop +start used after config changes and applies newsettings.
+systemctl enable service   ---> Auto-start on boot * Runs only when system boots *** Does not start it right now
+journalctl -u service      ----> Shows logs (messages) of a specific service.
+
+ssh user@ip  --> Login to another computer remotely
+scp file user@ip:/path  --> Copy a file to another computer
+scp -r dir user@ip:/path --> Copy a folder (directory) to another computer
+
+history and help
+
+history
+!123        # run command number means if go the histoy and then there u can see that command no  u can run that command again simply !command_number
+man command
+command --help
+
+
+
