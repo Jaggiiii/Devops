@@ -8,6 +8,7 @@ app.use(express.json());
 const client = new PrismaClient();
 
 app.get("/", (req, res) => {
+    console.log(" hii from get ")
     res.json({
         message: "Healthy server"
     })
