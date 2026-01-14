@@ -490,3 +490,59 @@ or
 # main benfit using bidmount is u can add redhot reloading while doing local changes.
 # command ex :
  docker run -it -p 5173:5173 \ -v "$(pwd)":/app \ -v /app/node_modules \ jagadeesh:latest
+
+ # Docker registry :
+ A Docker Registry is a service that stores and distributes Docker images.
+ A storage backend for Docker images
+
+# Key points
+It is a generic concept
+Can be:
+Public
+Private
+You can host your own registry
+Docker Hub itself is a registry
+
+# Examples
+Docker Hub
+GitHub Container Registry (GHCR)
+Google Container Registry (GCR)
+Amazon ECR
+Azure Container Registry
+Self-hosted registry using registry:2 image
+
+# Use case
+Store internal/private images
+Company-level image storage
+CI/CD pipelines
+
+# Docker Hub
+What it is
+Docker Hub is a specific, public Docker Registry service provided by Docker Inc.
+Think of it as:
+🌍 The most popular public Docker image registry
+# Key points
+It is a type of Docker Registry
+Hosted and managed by Docker
+Provides:
+Public repositories (free)
+Private repositories (limited in free plan)
+# Comes with:
+Official images (nginx, node, mysql, etc.)
+Automated builds
+Image scanning (security)
+
+# note:
+Docker Registry is a general service for storing Docker images, while Docker Hub is Docker’s official public registry and the default one used by Docker.
+
+Real-Life Example 🏪
+Registry → Any shop
+Docker Hub → Big supermarket like D-Mart / Amazon
+👉 All supermarkets are shops
+👉 But not all shops are D-Mart
+Same way:
+All Docker Hub is a registry
+But not all registries are Docker Hub
+
+Registry = storage concept
+Docker Hub = famous example of registry
